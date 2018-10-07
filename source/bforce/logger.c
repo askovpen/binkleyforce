@@ -166,7 +166,7 @@ int log_reopen(const char *logname, const char *ext, const char *tty)
 }
 
 
-int log(const char *s, ...)
+void log(const char *s, ...)
 
 {
 	char timestr[40];
@@ -205,8 +205,6 @@ int log(const char *s, ...)
 	}
 	
 	va_end(args);
-
-	return 0;
 }
 
 int logerr(const char *s, ...)
@@ -317,7 +315,7 @@ int log_close(void)
      
 }
 
-int log(const char *s, ...)
+void log(const char *s, ...)
 
 {
 	char timestr[40];
@@ -343,8 +341,6 @@ int log(const char *s, ...)
 	     syslog(LP_O, "%s %s[%d] ", timestr, log_ttyname, mypid);
 
 	va_end(args);
-
-	return 0;
 }
 
 int logerr(const char *s, ...)

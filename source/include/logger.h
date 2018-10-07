@@ -65,7 +65,7 @@ void log_setident(const char *ident);
 int  log_open(const char *logname, const char *ext, const char *tty);
 int  log_close(void);
 int  log_reopen(const char *logname, const char *ext, const char *tty);
-int  log(const char *s, ...);
+void  log(const char *s, ...);
 int  logerr(const char *s, ...);
 
 #ifdef DEBUG

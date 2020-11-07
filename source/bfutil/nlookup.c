@@ -16,7 +16,7 @@
 #include "logger.h"
 #include "util.h"
 #include "nodelist.h"
-#define DEF_DOMAIN "fidonet.org"
+#define DEF_DOMAIN "binkp.net"
 /*
  *  Our fake expressions checker. Allways return FALSE (?)
  */
